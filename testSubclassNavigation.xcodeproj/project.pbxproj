@@ -15,6 +15,8 @@
 		1A5AFEDD2522E250005DB856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5AFEDB2522E250005DB856 /* LaunchScreen.storyboard */; };
 		1A5AFEE82522E250005DB856 /* testSubclassNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5AFEE72522E250005DB856 /* testSubclassNavigationTests.swift */; };
 		1A5AFEF32522E250005DB856 /* testSubclassNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5AFEF22522E250005DB856 /* testSubclassNavigationUITests.swift */; };
+		1A5AFF722522E2BA005DB856 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5AFF712522E2BA005DB856 /* NavigationController.swift */; };
+		1A5AFF772522E2C4005DB856 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5AFF762522E2C4005DB856 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		1A5AFEEE2522E250005DB856 /* testSubclassNavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testSubclassNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5AFEF22522E250005DB856 /* testSubclassNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testSubclassNavigationUITests.swift; sourceTree = "<group>"; };
 		1A5AFEF42522E250005DB856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A5AFF712522E2BA005DB856 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		1A5AFF762522E2C4005DB856 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		1A5AFF7B2522E56C005DB856 /* testSubclassNavigation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testSubclassNavigation.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +104,13 @@
 		1A5AFECF2522E24D005DB856 /* testSubclassNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				1A5AFF7B2522E56C005DB856 /* testSubclassNavigation.entitlements */,
 				1A5AFED02522E24D005DB856 /* AppDelegate.swift */,
 				1A5AFED22522E24D005DB856 /* SceneDelegate.swift */,
 				1A5AFED42522E24D005DB856 /* ViewController.swift */,
 				1A5AFED62522E24D005DB856 /* Main.storyboard */,
+				1A5AFF712522E2BA005DB856 /* NavigationController.swift */,
+				1A5AFF762522E2C4005DB856 /* ContentViewController.swift */,
 				1A5AFED92522E250005DB856 /* Assets.xcassets */,
 				1A5AFEDB2522E250005DB856 /* LaunchScreen.storyboard */,
 				1A5AFEDE2522E250005DB856 /* Info.plist */,
@@ -258,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5AFF772522E2C4005DB856 /* ContentViewController.swift in Sources */,
 				1A5AFED52522E24D005DB856 /* ViewController.swift in Sources */,
+				1A5AFF722522E2BA005DB856 /* NavigationController.swift in Sources */,
 				1A5AFED12522E24D005DB856 /* AppDelegate.swift in Sources */,
 				1A5AFED32522E24D005DB856 /* SceneDelegate.swift in Sources */,
 			);
@@ -436,15 +446,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testSubclassNavigation/testSubclassNavigation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testSubclassNavigation/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testSubclassNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,15 +468,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = testSubclassNavigation/testSubclassNavigation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5BVQ8XRL4;
 				INFOPLIST_FILE = testSubclassNavigation/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.goodnotes.testSubclassNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
