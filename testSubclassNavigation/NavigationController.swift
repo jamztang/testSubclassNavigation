@@ -10,12 +10,11 @@ import UIKit
 
 class NavigationController: UINavigationController {
     
-
+    private let rootViewController: UIViewController
     override public init(rootViewController: UIViewController) {
+        self.rootViewController = rootViewController
+
         super.init(navigationBarClass: UINavigationBar.self, toolbarClass: nil)
-
-        self.viewControllers = [rootViewController]
-
         Swift.print("TTT NavigationController init")
     }
 
@@ -25,6 +24,7 @@ class NavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewControllers = [rootViewController]
         // Do any additional setup after loading the view.
         Swift.print("TTT NavigationController viewDidLoad")
 
